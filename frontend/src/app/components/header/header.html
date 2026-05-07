@@ -1,0 +1,45 @@
+<div style="display:flex; gap:10px; margin-bottom:20px;">
+
+  <select [(ngModel)]="selectedBase" (change)="onBaseChange()">
+
+    <option value="">Select Base</option>
+
+    @for(base of bases; track base.id) {
+
+      <option [value]="base.id">
+
+        {{ base.name }}
+
+      </option>
+    }
+
+  </select>
+
+  <select [(ngModel)]="selectedTable" (change)="tableChange.emit(selectedTable)">
+
+    <option value="">Select Table</option>
+
+    @for(table of tables; track table.id) {
+
+      <option [value]="table.name">
+
+        {{ table.name }}
+
+      </option>
+    }
+
+  </select>
+
+  <input
+    type="text"
+    [(ngModel)]="searchText"
+    placeholder="Search..."
+  />
+
+  <button (click)="onSearch()">
+
+    Search
+
+  </button>
+
+</div>

@@ -1,0 +1,7 @@
+@import "ag-grid-community/styles/ag-grid.css";
+@import "ag-grid-community/styles/ag-theme-quartz.css";
+
+body {
+  margin: 20px;
+  font-family: Arial;
+}
